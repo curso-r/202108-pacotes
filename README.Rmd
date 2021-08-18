@@ -1,0 +1,137 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE
+)
+
+library(magrittr)
+
+main_repo <- "main-pacotes"
+turma <- "202108-pacotes"
+aula_atual <- 0
+```
+
+## Pré-requisitos
+
+
+- Os **pacotes necessários** no curso e o código para instalação estão disponíveis [neste link](https://github.com/curso-r/main-pacotes#pacotes-necess%C3%A1rios).
+
+
+- A lista de softwares necessários está disponível  [neste link](https://curso-r.github.io/main-pacotes/#pr-requisitos)
+
+## Dúvidas
+
+Fora do horário de aula ou monitoria:
+
+- perguntas gerais sobre o curso deverão ser feitas no Classroom.
+
+- perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
+
+
+## Slides
+
+```{r echo=FALSE}
+tibble::tibble(
+  slide = CursoRutils:::list_github_files(main_repo, "slides/", "html"),
+  link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
+) %>%
+  dplyr::filter(!stringr::str_detect(slide, "_files/|libs/")) %>% 
+  knitr::kable(col.names = c("Nome", "Link para o slide"))
+```
+
+
+## Scripts usados em aula
+
+Aqui colocamos scripts utilizados em aula que são novos ou que são versões modificadas do material básico da aula.
+
+```{r echo=FALSE}
+nome_pasta <- "aula-pratica"
+tibble::tibble(
+  script = list.dirs(nome_pasta, recursive = FALSE),
+  link = paste0(
+    "https://github.com/curso-r/",
+    turma,
+    "/tree/master/",
+    script
+  )
+) %>% 
+  knitr::kable()
+```
+
+## Exercícios 
+
+```{r}
+# tibble::tibble(
+#   arquivos = CursoRutils:::list_github_files(main_repo, "exercicios/", ".R"),
+#   link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
+# ) %>% 
+#   dplyr::filter(stringr::str_starts(arquivos, "exercicios/")) %>% 
+#   knitr::kable()
+```
+
+## Resolução de exercícios 
+
+```{r}
+# tibble::tibble(
+#   arquivos = CursoRutils:::list_github_files(main_repo, "resolucao_exercicios/", ".R"),
+#   link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
+# ) %>% 
+#   knitr::kable()
+```
+
+
+## Dados
+
+```{r}
+
+tibble::tibble(
+  arquivos = CursoRutils:::list_github_files(main_repo, "dados/", ".zip|.Rds|.rds|.csv"),
+  link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
+) %>% 
+  knitr::kable()
+```
+
+## Material extra
+
+Referências extras comentadas nas aulas.
+
+```{r, message=FALSE}
+googlesheets4::gs4_deauth()
+"1SmCKCvJBff3CVty-xYKJ4NhEo2j6sUwkdET46vQisDY" %>% 
+  googledrive::as_id() %>% 
+  googlesheets4::read_sheet(turma) %>%
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url) %>%
+  dplyr::filter(aula <= aula_atual) %>% 
+  dplyr::arrange(aula) %>% 
+  knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
+```
+
+
+## Redes sociais da Curso-R
+
+
+Instagram: https://www.instagram.com/cursoo_r/
+
+Twitter: https://twitter.com/curso_r
+
+Youtube: https://www.youtube.com/c/CursoR6/featured
+
+Linkedin: https://www.linkedin.com/company/curso-r/
+
+Facebook: https://www.facebook.com/cursodeR
+
+Confira também:
+
+
+- Nosso livro **Ciência de Dados em R**: [https://livro.curso-r.com/](https://livro.curso-r.com/)
+
+- Nosso blog: [https://curso-r.com/blog/](https://curso-r.com/blog/)
