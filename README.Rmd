@@ -16,7 +16,7 @@ library(magrittr)
 
 main_repo <- "main-pacotes"
 turma <- "202108-pacotes"
-aula_atual <- 0
+aula_atual <- 1
 ```
 
 ## Pré-requisitos
@@ -69,12 +69,12 @@ tibble::tibble(
 ## Exercícios 
 
 ```{r}
-# tibble::tibble(
-#   arquivos = CursoRutils:::list_github_files(main_repo, "exercicios/", ".R"),
-#   link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
-# ) %>% 
-#   dplyr::filter(stringr::str_starts(arquivos, "exercicios/")) %>% 
-#   knitr::kable()
+tibble::tibble(
+  arquivos = CursoRutils:::list_github_files(main_repo, "exercicios/", ".R"),
+  link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
+) %>%
+  dplyr::filter(stringr::str_starts(arquivos, "exercicios/")) %>%
+  knitr::kable()
 ```
 
 ## Resolução de exercícios 
@@ -83,7 +83,7 @@ tibble::tibble(
 # tibble::tibble(
 #   arquivos = CursoRutils:::list_github_files(main_repo, "resolucao_exercicios/", ".R"),
 #   link = paste0("https://curso-r.github.io/", main_repo, "/", arquivos)
-# ) %>% 
+# ) %>%
 #   knitr::kable()
 ```
 
