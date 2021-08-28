@@ -43,6 +43,12 @@ versões modificadas do material básico da aula.
 
 ## Resolução de exercícios
 
+| arquivos                                                | link                                                                                            |
+|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------|
+| resolucao\_exercicios/01-exercicio-funcao-res.R         | <https://curso-r.github.io/main-pacotes/resolucao_exercicios/01-exercicio-funcao-res.R>         |
+| resolucao\_exercicios/02-exercicio-funcao-2-res.R       | <https://curso-r.github.io/main-pacotes/resolucao_exercicios/02-exercicio-funcao-2-res.R>       |
+| resolucao\_exercicios/03-exercicio-funcao-desafio-res.R | <https://curso-r.github.io/main-pacotes/resolucao_exercicios/03-exercicio-funcao-desafio-res.R> |
+
 ## Dados
 
 | arquivos                        | link                                                                    |
