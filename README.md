@@ -19,6 +19,15 @@ Fora do horário de aula ou monitoria:
 -   perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+## Trabalhos finais premiados
+
+-   [Raphael Saldanha](https://twitter.com/rfsaldanhario) - Pacote
+    [microdatasus](https://github.com/rfsaldanha/microdatasus)
+    (aprimoramentos no pacote já existente)
+
+-   [Victor Dogo](https://twitter.com/victor_dogo) - Pacote
+    [bradfordr](https://github.com/victordogo/bradfordr)
+
 ## Slides
 
 | Nome              | Link para o slide                                          |
